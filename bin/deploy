@@ -4,7 +4,7 @@ set -o errexit
 
 stack_name=ServerlessImageResize
 region="$(aws configure get region)"
-bucket_name="temp-serverless-resize-$(openssl rand -hex 8)"
+bucket_name="images.selectroo.ms"
 account_id="$(aws sts get-caller-identity --query Account --output text \
   | xargs echo -n | tr -d '\r')"
 
